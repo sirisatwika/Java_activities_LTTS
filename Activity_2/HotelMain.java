@@ -71,27 +71,27 @@ public class HotelMain {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Scanner scan = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		int choice, rate;
 		String tvchoice, wifichoice;
 		String hotelName;
 		int numberOfSqFeet;
 		boolean hasTV, hasWifi;
 		System.out.println("Enter your choice:\n1. Deluxe Room:\n2. Deluxe AC Room:\n3. Suite AC Room: ");
-		choice = scan.nextInt();
+		choice = sc.nextInt();
 		System.out.println("Hotel Name: ");
-		hotelName = scan.next();
+		hotelName = sc.next();
 		System.out.println("Room Square Feet Area: ");
-		numberOfSqFeet = scan.nextInt();
+		numberOfSqFeet = sc.nextInt();
 		System.out.println("Room Has TV (Yes/No): ");
-		tvchoice = scan.next();
+		tvchoice = sc.next();
 		if (tvchoice.equals("Yes")){
 			hasTV = true;
 		} else {
 			hasTV = false;
 		}
 		System.out.println("Room has Wifi (Yes/NO): ");
-		wifichoice = scan.next();
+		wifichoice = sc.next();
 		if(wifichoice.equals("Yes")){
 			hasWifi = true;
 		} else {
@@ -119,6 +119,7 @@ public class HotelMain {
 		default:
 			break;
 		}
+		sc.close();
 	}
 
 }
